@@ -1,6 +1,6 @@
-```plantuml
 @startuml
 'https://plantuml.com/sequence-diagram
+`!include` directive: https://github.com/WillBooster/plantuml-visualizer/blob/master/puml-sample/state.pu
 
 autonumber
 

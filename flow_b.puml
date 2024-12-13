@@ -1,4 +1,6 @@
 @startuml
+
+`!include` directive: https://github.com/WillBooster/plantuml-visualizer/blob/master/puml-sample/state.pu
 actor User
 participant "Library System" as LS
 participant "Database" as DB
