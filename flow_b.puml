@@ -1,0 +1,22 @@
+@startuml
+actor User
+participant "Library System" as LS
+participant "Database" as DB
+
+User -> LS: Search for Book
+LS -> DB: Query Book Details
+DB --> LS: Return Book Details
+LS --> User: Display Book Details
+
+User -> LS: Request to Borrow Book
+LS -> DB: Check Book Availability
+alt Book Available
+    DB --> LS: Confirm Availability
+    LS -> DB: Update Borrowing Record
+    DB --> LS: Confirm Borrowing
+    LS --> User: Borrowing Confirmed
+else Book Unavailable
+    DB --> LS: Notify Unavailability
+    LS --> User: Notify Book Unavailable
+end
+@enduml
